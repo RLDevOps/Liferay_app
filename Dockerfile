@@ -9,15 +9,15 @@ RUN apt-get -y install openssh-server
 
 RUN apt-get -y install openjdk-7-jdk
 
-ADD liferay-portal-tomcat-6.2-ce-ga2-20140319114139101.zip /opt/liferayApp/
+ADD liferay-portal-tomcat-6.2-ce-ga3-20150103155803016.zip /opt/liferayApp/
 
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
-RUN apt-get -y install unzip && unzip /opt/liferayApp/liferay-portal-tomcat-6.2-ce-ga2-20140319114139101.zip -d /opt/liferayApp/
+RUN apt-get -y install unzip && unzip /opt/liferayApp/liferay-portal-tomcat-6.2-ce-ga3-20150103155803016.zip -d /opt/liferayApp/
 
-ENV LIFERAY_HOME /opt/liferayApp/liferay-portal-6.2-ce-ga2/
+ENV LIFERAY_HOME /opt/liferayApp/liferay-portal-6.2-ce-ga3/
 #RUN cd $LIFERAY_HOME && rm -f portal-ext.properties portal-local.gghhcsb.com.properties portal-setup-wizard.properties
-ADD portal-ext.properties /opt/liferayApp/liferay-portal-6.2-ce-ga2/portal-ext.properties
+ADD portal-ext.properties /opt/liferayApp/liferay-portal-6.2-ce-ga3/portal-ext.properties
 ADD portal-local.gghhcsb.com.properties $LIFERAY_HOME/portal-local.gghhcsb.com.properties
 ADD portal-setup-wizard.properties $LIFERAY_HOME/portal-setup-wizard.properties
 
