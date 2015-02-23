@@ -18,7 +18,7 @@ RUN apt-get -y install unzip && unzip /opt/liferayApp/liferay-portal-tomcat-6.2-
 ENV LIFERAY_HOME /opt/liferayApp/liferay-portal-6.2-ce-ga3/
 #RUN cd $LIFERAY_HOME && rm -f portal-ext.properties portal-local.gghhcsb.com.properties portal-setup-wizard.properties
 ADD portal-ext.properties /opt/liferayApp/liferay-portal-6.2-ce-ga3/portal-ext.properties
-ADD portal-local.gghhcsb.com.properties $LIFERAY_HOME/portal-local.gghhcsb.com.properties
+#ADD portal-local.gghhcsb.com.properties $LIFERAY_HOME/portal-local.gghhcsb.com.properties
 ADD portal-setup-wizard.properties $LIFERAY_HOME/portal-setup-wizard.properties
 
 ADD start_tomcat.sh /usr/bin/start_tomcat.sh
